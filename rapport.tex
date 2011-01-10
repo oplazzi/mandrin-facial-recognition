@@ -1,0 +1,144 @@
+%author : Jérémie VENDRIN Mélodie PASSIEUX
+
+
+\documentclass[journal, twocolumn]{IEEEtran}
+%\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[pdftex]{graphicx}
+%\usepackage{titlesec}
+
+%\usepackage{algorithm2e}
+\usepackage{algorithm,algorithmic}
+
+\usepackage[pdftex,bookmarks,colorlinks]{hyperref}
+\hypersetup{colorlinks,%
+citecolor=black,%
+filecolor=black,%
+linkcolor=black,%
+urlcolor=black,%
+pdftex
+}
+
+
+%Pour coller du code dans le rapport
+%\usepackage{listings}
+%\lstset{language=java,numberstyle=\tiny, breaklines=true}
+%\begin{lstlisting}
+%\end{lstlisting}
+
+% Définition des différent raccourcis
+\newcommand{\psubject}{Interactions by facial recognition}
+\newcommand{\ii}{\textit{i} }
+\newcommand{\nn}{\textit{n} }
+\newcommand{\pere}[1]{\textit{$pere_{#1}$} }
+
+\title{\psubject}
+\author{Jérémy CLEMENT, Jérémie VENDRIN}
+
+\makeatletter
+\def\clap#1{\hbox to 0pt{\hss #1\hss}}%
+\def\ligne#1{%
+\hbox to \hsize{%
+\vbox{\centering #1}}}%
+\def\haut#1#2#3{%
+\hbox to \hsize{%
+\rlap{\vtop{\raggedright #1}}%
+\hss
+\clap{\vtop{\centering #2}}%
+\hss
+\llap{\vtop{\raggedleft #3}}}}%
+\def\bas#1#2#3{%
+\hbox to \hsize{%
+\rlap{\vbox{\raggedright #1}}%
+\hss
+\clap{\vbox{\centering #2}}%
+\hss
+\llap{\vbox{\raggedleft #3}}}}%
+\def\maketitle{%
+\thispagestyle{empty}\vbox to \vsize{%
+\haut{}{\@blurb}{}
+\vfill
+\vspace{1cm}
+\begin{flushleft}
+	\usefont{OT1}{ptm}{m}{n}
+	\huge \@title
+\end{flushleft}
+\par
+\hrule height 4pt
+\par
+\begin{flushright}
+	\usefont{OT1}{phv}{m}{n}
+	\Large \@author
+	\par
+\end{flushright}
+\vspace{1cm}
+\vfill
+\vfill
+\bas{}{\@location, \@date}{}
+}%
+\cleardoublepage
+}
+\def\date#1{\def\@date{#1}}
+\def\author#1{\def\@author{#1}}
+\def\title#1{\def\@title{#1}}
+\def\location#1{\def\@location{#1}}
+\def\blurb#1{\def\@blurb{#1}}
+\date{January 2011}
+\author{}
+\title{}
+\location{Montpellier}\blurb{}
+\makeatother
+\title{FACIAL RECOGNITION}
+\author{Jérémy CLEMENT, Jérémie VENDRIN}
+\location{Montpellier}
+\blurb{%
+Université Montpellier 2 --  FMIN319 : INTERACTIVE COMPUTING\\
+\textbf{Article de présentation de recherche dans le domaine de la reconnaissance faciale}\\[1em]
+Supervised by : Stefano Alessandro Cerri
+}% 
+
+
+\begin{document}
+\begin{onecolumn}
+	\begin{table}[t]
+		\centering
+  		\begin{tabular}{l c r}
+  			\includegraphics{img/um2.png}& ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&  \includegraphics{img/um2-1.png} \\
+			~~& ~~& ~~\\
+			~~& ~~& ~~\\
+			~~& ~~& ~~\\
+			~~& ~~& ~~\\
+			~~& ~~& ~~\\
+  		\end{tabular}
+	\end{table}
+
+	\maketitle
+\end{onecolumn}
+\begin{twocolumn}
+	\begin{abstract}
+		\input{includes/abstract}
+	\end{abstract}
+
+	%Inclure un fichier tex par "section"
+	\section{Introduction}
+		\input{includes/introduction}
+
+	\section{What is the face recognition?}
+		\input{includes/whatisFaceRec}
+
+	\section{Today methods and application}
+		\input{includes/todayMethods}
+
+	\section{Today researchs for tomorow uses}
+		\input{includes/todayResearch}
+	\cite{NPIA}
+	\cite{nyuLucasHelen}
+
+	\bibliographystyle{plain}
+	\bibliography{biblio}
+
+\end{twocolumn}
+\end{document}
