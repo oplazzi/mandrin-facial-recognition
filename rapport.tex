@@ -2,13 +2,11 @@
 
 
 \documentclass[journal, twocolumn]{IEEEtran}
-%\usepackage{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage[pdftex]{graphicx}
-%\usepackage{titlesec}
 
 %\usepackage{algorithm2e}
 \usepackage{algorithm,algorithmic}
@@ -30,13 +28,10 @@ pdftex
 %\end{lstlisting}
 
 % Définition des différent raccourcis
-\newcommand{\psubject}{Interactions by facial recognition}
+\newcommand{\frec}{face analysis}
 \newcommand{\ii}{\textit{i} }
 \newcommand{\nn}{\textit{n} }
 \newcommand{\pere}[1]{\textit{$pere_{#1}$} }
-
-\title{\psubject}
-\author{Jérémy CLEMENT, Jérémie VENDRIN}
 
 \makeatletter
 \def\clap#1{\hbox to 0pt{\hss #1\hss}}%
@@ -86,17 +81,15 @@ pdftex
 \def\title#1{\def\@title{#1}}
 \def\location#1{\def\@location{#1}}
 \def\blurb#1{\def\@blurb{#1}}
+
+
 \date{January 2011}
-\author{}
-\title{}
-\location{Montpellier}\blurb{}
-\makeatother
-\title{FACIAL RECOGNITION}
+\title{FACE ANALYSIS}
 \author{Jérémy CLEMENT, Jérémie VENDRIN}
 \location{Montpellier}
 \blurb{%
 Université Montpellier 2 --  FMIN319 : INTERACTIVE COMPUTING\\
-\textbf{Article de présentation de recherche dans le domaine de la reconnaissance faciale}\\[1em]
+\textbf{Article presenting research in the field of face analysis}\\[1em]
 Supervised by : Stefano Alessandro Cerri
 }% 
 
@@ -124,16 +117,16 @@ Supervised by : Stefano Alessandro Cerri
 
 	%Inclure un fichier tex par "section"
 	\section{Introduction}
-		\input{includes/introduction}
+	\input{includes/introduction}
 
-	\section{What is the face recognition?}
-		\input{includes/whatisFaceRec}
+	\section{What is the face analysis?}
+	\input{includes/whatisFaceRec}
 
 	\section{Today methods and application}
-		\input{includes/todayMethods}
+	\input{includes/todayMethods}
 
 	\section{Today researchs for tomorow uses}
-		\input{includes/todayResearch}
+	\input{includes/todayResearch}
 	\cite{NPIA}
 	\cite{nyuLucasHelen}
 
