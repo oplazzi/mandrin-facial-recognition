@@ -1,15 +1,30 @@
 %author : Jérémie VENDRIN, Jérémy CLEMENT
 
 
-\documentclass[journal, 10px, twocolumn]{IEEEtran}
+\documentclass[journal, 10,5pt,twocolumn]{IEEEtran}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage[pdftex]{graphicx}
+\usepackage{fancyhdr}
 
 %\usepackage{algorithm2e}
 \usepackage{algorithm,algorithmic}
+
+
+% Gestion des entete et pied de page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[R]{\includegraphics[height=20mm]{img/um2-1.png}}
+\fancyhead[L]{\includegraphics[height=20mm]{img/um2.png}}
+\renewcommand{\headrulewidth}{0pt}
+\addtolength{\headheight}{2mm}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{ \fancyhead{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot{}}
+\fancyfoot[CO,CE]{\textbf{\thepage}} 
 
 \usepackage[pdftex,bookmarks,colorlinks]{hyperref}
 \hypersetup{colorlinks,%
@@ -33,84 +48,17 @@ pdftex
 \newcommand{\nn}{\textit{n} }
 \newcommand{\pere}[1]{\textit{$pere_{#1}$} }
 
-\makeatletter
-\def\clap#1{\hbox to 0pt{\hss #1\hss}}%
-\def\ligne#1{%
-\hbox to \hsize{%
-\vbox{\centering #1}}}%
-\def\haut#1#2#3{%
-\hbox to \hsize{%
-\rlap{\vtop{\raggedright #1}}%
-\hss
-\clap{\vtop{\centering #2}}%
-\hss
-\llap{\vtop{\raggedleft #3}}}}%
-\def\bas#1#2#3{%
-\hbox to \hsize{%
-\rlap{\vbox{\raggedright #1}}%
-\hss
-\clap{\vbox{\centering #2}}%
-\hss
-\llap{\vbox{\raggedleft #3}}}}%
-\def\maketitle{%
-\thispagestyle{empty}\vbox to \vsize{%
-\haut{}{\@blurb}{}
-\vfill
-\vspace{1cm}
-\begin{flushleft}
-	\usefont{OT1}{ptm}{m}{n}
-	\huge \@title
-\end{flushleft}
-\par
-\hrule height 4pt
-\par
-\begin{flushright}
-	\usefont{OT1}{phv}{m}{n}
-	\Large \@author
-	\par
-\end{flushright}
-\vspace{1cm}
-\vfill
-\vfill
-\bas{}{\@location, \@date}{}
-}%
-\cleardoublepage
-}
-\def\date#1{\def\@date{#1}}
-\def\author#1{\def\@author{#1}}
-\def\title#1{\def\@title{#1}}
-\def\location#1{\def\@location{#1}}
-\def\blurb#1{\def\@blurb{#1}}
-
 
 \date{January 2011}
 \title{FACE ANALYSIS}
-\author{Jérémy CLEMENT, Jérémie VENDRIN}
-\location{Montpellier}
-\blurb{%
-Université Montpellier 2 --  FMIN319 : INTERACTIVE COMPUTING\\
-\textbf{Article presenting research in the field of face analysis}\\[1em]
-Supervised by : Stefano Alessandro Cerri
-}% 
-
+\author{proposed by Jérémy CLEMENT, Jérémie VENDRIN\\ supervised by Stefano Alessandro Cerri }
+\IEEEaftertitletext{\vspace{-1\baselineskip}}
 
 \begin{document}
-\begin{onecolumn}
-	\begin{table}[t]
-		\centering
-  		\begin{tabular}{l c r}
-  			\includegraphics{img/um2.png}& ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&  \includegraphics{img/um2-1.png} \\
-			~~& ~~& ~~\\
-			~~& ~~& ~~\\
-			~~& ~~& ~~\\
-			~~& ~~& ~~\\
-			~~& ~~& ~~\\
-  		\end{tabular}
-	\end{table}
 
 	\maketitle
-\end{onecolumn}
-\begin{twocolumn}
+	\thispagestyle{fancy}
+	
 	\begin{abstract}
 		\input{includes/abstract}
 	\end{abstract}
@@ -137,5 +85,4 @@ Supervised by : Stefano Alessandro Cerri
 	\bibliographystyle{alpha}
 	\bibliography{biblio}
 
-\end{twocolumn}
 \end{document}
