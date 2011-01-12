@@ -1,8 +1,8 @@
-\IEEEPARstart{N}{owadays} searches look at facial features detection, and facial expression recognition. Indeed, for analyse a face there is several methods. Principal Component Analysis (PCA), Linear Discriminant Analysis (LDA), and Locality Preserving Projection (LPP) are most used methods \cite{Using-Graph}.In this part, we will quickly present each typical methods employed for analyse a face\cite{Active-Shape}. These approchs are not used alone, they are often combinated.\\
+\IEEEPARstart{N}{owadays} searches look at facial features detection, and facial expression recognition. Indeed, for analyse a face there is several methods. Principal Component Analysis (PCA), Linear Discriminant Analysis (LDA), and Independent Component Analysis (ICA) are most used methods \cite{Using-Graph}\cite{active-appearance-model}.In this part, we will quickly present each typical methods employed for analyse a face. These approchs are not used alone, they are often combinated\cite{Two-Dimensional}\cite{Active-Shape}.\\
 	
 	
 	\subsection{Principal Component Analysis (PCA)} \leavevmode\par
-	PCA is a useful statistical technique that has found application in fields such as face recognition and image compression, and is a common technique for finding patterns in data of high dimension. For use PCA, we need to have several images available. PCA represent images such as this :
+	PCA\cite{PCA} is a useful statistical technique that has found application in fields such as face recognition and image compression, and is a common technique for finding patterns in data of high dimension. For use PCA, we need to have several images available. PCA represent images such as this :
 		\begin{itemize}
 		\item For an image I (nxn), there is $n^{2}$ pixels.
 		\item For k images PCA extract $n^{2}$ k-dimensional vectors.	
@@ -69,7 +69,7 @@ given class .
 \end{itemize}
 
 \subsection{Template matching}
-The template matching technique is a global face recognition. The correlation
+The template matching technique is a global face recognition\cite{Image-Based}. The correlation
 is generally used to measure the similarity between a template wich is a mask and stored
 image to recognize. The templates should be deliberately designed to cover the variety
 possible variations of the image.
