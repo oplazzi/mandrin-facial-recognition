@@ -1,7 +1,7 @@
 %author : Jérémie VENDRIN, Jérémy CLEMENT
 
 
-\documentclass[journal, 11pt,twocolumn]{IEEEtran}
+\documentclass[a4paper, 11pt,twocolumn]{IEEEtran}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amssymb}
@@ -19,12 +19,11 @@
 \fancyhf{} 
 \fancyhead[R]{\includegraphics[height=20mm]{img/um2-1.png}}
 \fancyhead[L]{\includegraphics[height=20mm]{img/um2.png}}
-\renewcommand{\headrulewidth}{0pt}
-\addtolength{\headheight}{2mm}
-\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.0pt}
+\addtolength{\headheight}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
 \fancypagestyle{plain}{ \fancyhead{}
-\renewcommand{\headrulewidth}{0pt}
-\fancyfoot{}}
+\renewcommand{\headrulewidth}{0pt}} 
 \fancyfoot[CO,CE]{\textbf{\thepage}} 
 
 \usepackage[pdftex,bookmarks,colorlinks]{hyperref}
@@ -55,6 +54,8 @@ pdftex
 \author{proposed by Jérémy CLEMENT, Jérémie VENDRIN\\ supervised by Stefano Alessandro Cerri }
 \IEEEaftertitletext{\vspace{-1\baselineskip}}
 
+\pagestyle{fancy}
+
 \begin{document}
 
 	\maketitle
@@ -71,19 +72,21 @@ pdftex
 	\section{What is the face analysis? $_{(Jeremy Clement)}$}
 	\input{includes/whatisFaceRec}
 
-	\section{Application fields $_{(Jeremy Clement)}$}
-	\input{includes/todayMethods}
-
 	\section{Methods and researchs $_{(Jeremie Vendrin)}$}
 	\input{includes/todayResearch}
+
+	\section{Application fields $_{(Jeremy Clement)}$}
+	\input{includes/todayMethods}
 
 	\section*{Conclusion $_{(Jeremie Vendrin)}$}
 	\input{includes/conclusion}
 
 	\cite{NPIA}
 	\cite{nyuLucasHelen}
-
+\newpage
+\begin{onecolumn}
 	\bibliographystyle{alpha}
 	\bibliography{biblio}
+\end{onecolumn}
 
 \end{document}
